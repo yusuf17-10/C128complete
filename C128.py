@@ -10,8 +10,7 @@ soup = BeautifulSoup(page.text,'html.parser')
 start_table =soup.find_all("table")
 temp_list = []
 
-start_table_rows = start_table.find_all("tr")
-
+start_table_rows = start_table[4].find_all("tr")
 for tr in start_table_rows:
     td = tr.find_all("td")
     row = [i.text.rstrip() for i in td]
