@@ -22,14 +22,12 @@ star_name = []
 distance = []
 radius = []
 mass = []
-lum = []
 
 for i in range(1,len(temp_list)):
-    star_name.append(temp_list[i][1])
-    distance.append(temp_list[i][6])
-    radius.append(temp_list[i][10])
-    mass.append(temp_list[i][9])
-    lum.append(temp_list[i][7])
+    star_name.append(temp_list[i][0])
+    distance.append(temp_list[i][5])
+    radius.append(temp_list[i][7])
+    mass.append(temp_list[i][8])
 df = pd.DataFrame(list(zip(star_name,distance,radius,mass,lum)),columns = ["star_name","distance","radius","mass","lum"])
 df.to_csv("brown_dwarf_stars.csv")     
 
